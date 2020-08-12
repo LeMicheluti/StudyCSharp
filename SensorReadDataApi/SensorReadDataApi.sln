@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30330.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorReadDataApi", "SensorReadDataApi.csproj", "{2C15A383-7E82-4017-BBCB-C3C8B9BCAACA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C15A383-7E82-4017-BBCB-C3C8B9BCAACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C15A383-7E82-4017-BBCB-C3C8B9BCAACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C15A383-7E82-4017-BBCB-C3C8B9BCAACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C15A383-7E82-4017-BBCB-C3C8B9BCAACA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A04B497-6C98-471D-BD7A-A2C6F1BBA25E}
+	EndGlobalSection
+EndGlobal
