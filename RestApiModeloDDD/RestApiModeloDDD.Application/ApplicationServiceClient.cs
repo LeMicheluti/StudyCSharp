@@ -1,9 +1,7 @@
 ﻿using RestApiModeloDDD.Application.Dtos;
 using RestApiModeloDDD.Application.Interfaces;
 using RestApiModeloDDD.Domain.Core.Interfaces.Services;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace RestApiModeloDDD.Application
 {
@@ -11,29 +9,42 @@ namespace RestApiModeloDDD.Application
     {
         private readonly IServiceClient serviceClient;
         private readonly IMapperClient mapperClient;
+
+        public ApplicationServiceClient(IServiceClient serviceClient,
+                                        IMapperClient mapperClient)
+        {
+            this.serviceClient = serviceClient;
+            this.mapperClient = mapperClient;
+        }
+
         public void Add(ClientDto clientDto)
         {
-            throw new NotImplementedException();
+            var client = mapperClient.MapperDtoToEntity(clientDto);
+            serviceClient.Add(client);
         }
 
         public IEnumerable<ClientDto> GetAll()
         {
-            throw new NotImplementedException();
+            var clients = serviceClient.GetAll();
+            return mapperClient.MapperListClientDto(clients);
         }
 
         public ClientDto GetById(int id)
         {
-            throw new NotImplementedException();
+            var client = serviceClient.GetById(id);
+            return mapperClient.MapperEntityToDto(client);
         }
 
         public void Remove(ClientDto clientDto)
         {
-            throw new NotImplementedException();
+            var client = mapperClient.MapperDtoToEntity(clientDto);
+            serviceClient.Remove(client);
         }
 
         public void Update(ClientDto clientDto)
         {
-            throw new NotImplementedException();
+            var client = mapperClient.MapperDtoToEntity(clientDto);
+            serviceClient.Update(client);
         }
     }
 }
