@@ -1,11 +1,14 @@
 using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using RestApiModeloDDD.Infrastructure.CrossCutting.IOC;
+using RestApiModeloDDD.Infrastructure.Data;
 
 namespace RestApiModeloDDD.API
 {
@@ -21,7 +24,10 @@ namespace RestApiModeloDDD.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connection = Configuration["SqlConnetion:SqlConnectionString"];
+            services.AddDbContext<SqlContext>(options => options.UseSqlServer(connection));
             services.AddControllers();
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Model DDD", Version = "v1" });
@@ -60,6 +66,3 @@ namespace RestApiModeloDDD.API
         }
     }
 }
-
-//https://www.youtube.com/watch?v=plS-rf2UIPI
-//2:03:51
