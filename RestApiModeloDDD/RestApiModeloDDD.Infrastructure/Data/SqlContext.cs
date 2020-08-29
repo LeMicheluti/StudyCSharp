@@ -11,8 +11,8 @@ namespace RestApiModeloDDD.Infrastructure.Data
 
         public SqlContext(DbContextOptions<SqlContext> options) : base(options) { }
 
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Client> Client { get; set; }
+        public DbSet<Product> Product { get; set; }
         public override int SaveChanges()
         {
             foreach (var entry in ChangeTracker.Entries().Where(entry => entry.Entity.GetType().GetProperty("CreateAt") != null))
