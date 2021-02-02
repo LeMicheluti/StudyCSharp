@@ -10,5 +10,5 @@ Links dos tutoriais de cada projeto:
 
 * [RestApiModeloDDD](https://youtu.be/plS-rf2UIPI)
 
-* [Swagger] (https://www.youtube.com/watch?v=oAm_GTMLcng&ab_channel=DEVNETCOREValdirFerreira)
-* [Swagger] (https://www.youtube.com/watch?v=lrYElKHrGdY&ab_channel=Jo%C3%A3oPedroHudinik)
+* [Swagger](https://www.youtube.com/watch?v=oAm_GTMLcng&ab_channel=DEVNETCOREValdirFerreira)
+* [Swagger](https://www.youtube.com/watch?v=lrYElKHrGdY&ab_channel=Jo%C3%A3oPedroHudinik)
